@@ -1,1 +1,78 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row text-center" id="header">
+            <div class="col text-center" id="header-col">Weather Dashboard</div>
+        </div>
+        <div id="mainRow" class="row">
+
+            <div class="col-md-3" id="searchHistory">
+                <label style="font-weight: 600;">Search For a City:</label>
+                <div class="input-group mb-3">
+                    <input id="city-search" type="text" class="form-control" placeholder="Denver, CO">
+                    <div class="input-group-append">
+                        <button id="getWeather" class="btn btn-primary" type="submit">
+                            <i id="getWeatherIcon" class="fas fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div>
+
+                    <ul id="past-cities" class="list-group">
+
+                    </ul>
+
+                </div>
+
+            </div>
+            <div class="col-md-9 ">
+                <div class="row">
+                    <div id="card" class="card weBuiltThisCity">
+                        <div class="card-body">
+
+                            <div>
+                                <span class="card-title" style="font-size: xx-large" display="inline-block" id="cityName">City</span><img display="inline-block" id="curWeathIcn"></img>
+                            </div>
+                            <ul>
+                                <li>
+                                </li>
+                                <li class="card-text" id="curTemp">Temp:</li>
+                                <li class="card-text" id="curHum">Humidity:</li>
+                                <li class="card-text" id="curWind">Windspeed:</li>
+                                <li class="card-text" id="curUv">UV Index:</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h2 id="day4cast" class="card-title">5-Day Forecast</h2>
+                </div>
+                <div class="row" id="forecast"></div>
+            </div>
+        </div>
+        <script src="luxon.js"></script>
+        <script src="https://kit.fontawesome.com/447e525a7d.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/8bee116590.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js" integrity="sha256-H9jAz//QLkDOy/nzE9G4aYijQtkLt9FvGmdUTwBk6gs=" crossorigin="anonymous"></script>
+        <script src="./script.js"></script>
+
+</body>
+
+</html>

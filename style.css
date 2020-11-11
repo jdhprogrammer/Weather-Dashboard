@@ -1,1 +1,90 @@
-body BODY
+   div {
+       /* border: solid; */
+   }
+   
+   ul {
+       list-style-type: none;
+       padding-left: 0;
+   }
+   
+   .col {
+       padding: 5px;
+   }
+   
+   #searchHistory {
+       background-color: rgb(243, 243, 243);
+       padding-top: 10px;
+   }
+   
+   .card.weBuiltThisCity {
+       width: 100%;
+       background-color: #f0f0f0;
+       margin-left: 10px;
+       margin-top: 10px;
+       background-color: rgb(250, 250, 250);
+       line-height: 2em;
+       font-size: medium;
+   }
+   
+   #card {}
+   
+   .card-title {}
+   
+   .forecast-card {
+       background-color: #2297fd;
+       color: white;
+   }
+   
+   .search-section {
+       height: 95%;
+   }
+   
+   td {
+       width: 100%;
+   }
+   
+   .cityList {}
+   
+   #past-cities {}
+   
+   .cityList:hover {
+       background-color: #28a745;
+       color: #fff;
+   }
+   
+   .container {
+       margin-top: 5px;
+   }
+   
+   .row {
+       margin-bottom: 10px;
+   }
+   
+   .list-group-item {
+       border: 1px solid rgba(0, 0, 0, .125);
+   }
+   
+   #header {
+       padding: 5px;
+       margin-bottom: 0px;
+       color: white;
+       font-size: 30px;
+       font-weight: 500;
+       background-color: rgb(60, 60, 65);
+   }
+   
+   #day4cast {
+       padding: 10px;
+       margin-bottom: 0px;
+   }
+   
+   #forecast {
+       height: 200px;
+       margin-top: 0px;
+       padding: 10px;
+       font-size: 10px;
+   }
+   
+   .col.mx-1.card {
+       padding: 0px;
+   }
