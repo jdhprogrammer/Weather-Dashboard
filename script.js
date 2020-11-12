@@ -1,3 +1,8 @@
+$("body").click(function(event) {
+    console.log("clicked: " + event.target.nodeName);
+});
+
+
 $(document).ready(function() {
     let test = false;
     // use school key inorder to get forecast data
@@ -6,18 +11,24 @@ $(document).ready(function() {
     let requestType = "";
     let query = "";
     //
-    $('#getWeather').on('click', function() {
-        if (test) console.log("on click");
-        // get location from user input box
-        let t = $(this.target)[0];
+    let getWeather = document.querySelector("#getWeather");
+    let citySearch = document.querySelector("#city-search")
+    getWeather.addEventListener('click', (event) => {
+        let inputCity = event.target;
         let location = "";
 
-        if (t.id === "getWeather" || t.id === "getWeatherIcon") {
-            if (test) console.log("getWeather");
-            location = $('#city-search').val().trim().toUpperCase();
-        } else if (t.className === ("list-group-item past-cities cityList")) {
-            if (test) console.log("list-group-item past-cities cityList");
-            location = t.innerText;
+
+        switch (inputCity.id) {
+            case "getWeather":
+                console.log('getWeather was clicked');
+                location = citySearch.value.toUpperCase();
+                break;
+        }
+        switch (inputCity.id) {
+            case "getWeatherIcon":
+                console.log('getWeatherIcon was clicked');
+                location = citySearch.value.toUpperCase();
+                break;
         }
 
         // should make this generic to use this on the area clicked
@@ -28,22 +39,35 @@ $(document).ready(function() {
         updateCityStore(location);
         getCurWeather(location);
         getForecastWeather(location);
+
     });
+
     // pull current location
-    $('#past-cities').on('click', function() {
-        if (test) console.log("on click");
-        // get location from user input box
-        let t = $(this.target)[0];
+    let pastCities = document.querySelector('#past-cities');
+
+    pastCities.addEventListener('click', (event) => {
+        let targetCity = event.target;
         let location = "";
 
-
-        if (t.classNaddme === ("list-group-item past-cities cityList")) {
-            if (test) console.log("list-group-item past-cities cityList");
-            location = t.textContent;
+        switch (targetCity.id) {
+            case 'cityButton0':
+                console.log('cityButton0 was clicked');
+                location = targetCity.textContent;
+                break;
+            case 'cityButton1':
+                console.log('cityButton1 was clicked');
+                location = targetCity.textContent;
+                break;
+            case 'cityButton2':
+                console.log('cityButton2 was clicked');
+                location = targetCity.textContent;
+                break;
+            case 'cityButton3':
+                console.log('cityButton3 was clicked');
+                location = targetCity.textContent;
+                break;
         }
 
-        // should make this generic to use this on the area clicked
-        // let location = $(this).val().trim().toUpperCase();
         if (test) { console.log('location:' + location); }
         if (location == "") return;
 
@@ -214,8 +238,10 @@ $(document).ready(function() {
         if (test) { console.log('drawForecast - cur:', cur); }
 
         for (let i = 0; i < cur.length; i++) {
-            let $colmx1 = $('<div class="col mx-1 card">');
-            let $cardBody = $('<div class="card-body forecast-card">');
+            let $col12 = $('<div class="col-6 col-md-4 col-lg-2 noPad mb-1 mb-lg-0 ">')
+                // let $roStar = $('<div class=')
+            let $colmx1 = $('<div class="card noPad buttMargin rounded">');
+            let $cardBody = $('<div class="card-body forecast-card noPad text-center lilPad">');
             let $cardTitle = $('<h5 class="card-title">');
             $cardTitle.text(cur[i].date);
 
@@ -250,8 +276,8 @@ $(document).ready(function() {
             $cardTitle.append($ul);
             $cardBody.append($cardTitle);
             $colmx1.append($cardBody);
-
-            $('#forecast').append($colmx1);
+            $col12.append($colmx1);
+            $('#forecast').append($col12);
         }
     };
 
@@ -280,15 +306,15 @@ $(document).ready(function() {
             if (uv < 3) {
                 bkcolor = 'limegreen';
             } else if (uv < 6) {
-                bkcolor = 'lightyellow';
+                bkcolor = 'yellow';
             } else if (uv < 8) {
-                bkcolor = 'lightorange';
+                bkcolor = 'orange';
             } else if (uv < 11) {
-                bkcolor = 'lightred';
+                bkcolor = 'red';
             }
 
             let title = '<span>UV Index: </span>';
-            let color = title + `<span style="background-color: ${bkcolor}; padding: 0 7px 0 7px;">${response.value}</span>`;
+            let color = title + `<span style="background-color: ${bkcolor};  padding: 5px 7px 5px 7px; border-radius: 7px;">${response.value}</span>`;
 
             $('#curUv').html(color);
         });
@@ -314,8 +340,8 @@ $(document).ready(function() {
         let cityList = JSON.parse(localStorage.getItem("cityList")) || [];
 
         $('#past-cities').empty();
-        cityList.forEach(function(city) {
-            let cityNameDiv = $(`<li class='list-group-item past-cities cityList' id='past-cities' value='${city}'>${city}</li>`);
+        cityList.forEach(function(city, i) {
+            let cityNameDiv = $(`<li class='list-group-item cityList' id='cityButton${i}' value='${city}'>${city}</li>`);
 
 
             $('#past-cities').append(cityNameDiv);

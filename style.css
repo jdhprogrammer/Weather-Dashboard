@@ -43,7 +43,9 @@
        width: 100%;
    }
    
-   .cityList {}
+   .cityList {
+       font-size: 11ptd;
+   }
    
    #past-cities {}
    
@@ -83,8 +85,20 @@
        margin-top: 0px;
        padding: 10px;
        font-size: 10px;
+       margin-bottom: 10px;
    }
    
-   .col.mx-1.card {
+   .noPad {
        padding: 0px;
+   }
+   
+   .lilPad {
+       padding-top: 10px;
+       border-radius: 10px;
+       margin: 1px;
+   }
+   
+   .buttMargin {
+       background-color: transparent;
+       border: none;
    }
