@@ -3,6 +3,7 @@ $("body").click(function(event) {
 });
 
 
+
 $(document).ready(function() {
     let test = false;
     // use school key inorder to get forecast data
@@ -13,7 +14,20 @@ $(document).ready(function() {
     //
     let getWeather = document.querySelector("#getWeather");
     let citySearch = document.querySelector("#city-search")
+
+    citySearchPholder = ["San Luis Potosí", "Dallas", "Singapore", "Birmingham", "Jackson", "Richardson", "New York City"];
+
+    for (let i = 0; i < 1; i++) {
+        const pHolder = citySearchPholder[Math.floor(Math.random() * 7)];
+        if (pHolder !== "") {
+            citySearch.placeholder = "(i.e., " + pHolder + ")";
+
+        };
+
+    };
+
     getWeather.addEventListener('click', (event) => {
+        event.preventDefault();
         let inputCity = event.target;
         let location = "";
 
@@ -46,6 +60,7 @@ $(document).ready(function() {
     let pastCities = document.querySelector('#past-cities');
 
     pastCities.addEventListener('click', (event) => {
+        event.preventDefault();
         let targetCity = event.target;
         let location = "";
 
@@ -66,6 +81,26 @@ $(document).ready(function() {
                 console.log('cityButton3 was clicked');
                 location = targetCity.textContent;
                 break;
+            case 'cityButton4':
+                console.log('cityButton4 was clicked');
+                location = targetCity.textContent;
+                break;
+            case 'cityButton5':
+                console.log('cityButton5 was clicked');
+                location = targetCity.textContent;
+                break;
+            case 'cityButton6':
+                console.log('cityButton6 was clicked');
+                location = targetCity.textContent;
+                break;
+            case 'cityButton7':
+                console.log('cityButton8 was clicked');
+                location = targetCity.textContent;
+                break;
+            case 'cityButton8':
+                console.log('cityButton9 was clicked');
+                location = targetCity.textContent;
+                break;
         }
 
         if (test) { console.log('location:' + location); }
@@ -75,6 +110,8 @@ $(document).ready(function() {
         getCurWeather(location);
         getForecastWeather(location);
     });
+
+    // setInterval ***************
 
     function convertDate(epoch) {
         // function to convert unix epoch to local time
