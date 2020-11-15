@@ -7,7 +7,7 @@ github: https://github.com/jdhprogrammer
 
 Project Repository: https://github.com/jdhprogrammer/Weather-Dashboard
 
-Project Deployment: http://jdhprogrammer.com/Weather-Dashboard/
+Project Deployment: https://jdhprogrammer.com/Weather-Dashboard/
 
 ### 06 Server-Side APIs: Weather Dashboard
 
