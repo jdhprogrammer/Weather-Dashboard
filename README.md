@@ -1,6 +1,14 @@
 # Weather-Dashboard
 Weather Dashboard - Server Side API's and Javascript.
 
+#### Developer: David Harris
+email: jdh.programmer@gmail.com - 
+github: https://github.com/jdhprogrammer
+
+Project Repository: https://github.com/jdhprogrammer/Weather-Dashboard
+
+Project Deployment: http://jdhprogrammer.com/Weather-Dashboard/
+
 ### 06 Server-Side APIs: Weather Dashboard
 
 Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
@@ -36,8 +44,12 @@ THEN I am presented with the last searched city forecast
 
 ### Screenshots
 
+<<<<<<< HEAD
 ![Screenshot of Weather Dashboard](Assets/Screenshots/Weather_Dashboard.jpeg?raw=true "Weather Dashboard")
 ![Screenshot of Weather Dashboard Local Storage](Assets/Screenshots/Weather_LocalStorage.jpeg?raw=true "Weather Dashboard Local Storage")
 ![Screenshot of Weather Dashboard Medium Screen](Assets/Screenshots/Weather_Medium_Screen.jpeg?raw=true "Weather Dashboard Medium Screen Small Screen")
 ![Screenshot of Weather Dashboard Small Screen](Assets/Screenshots/Weather_Small_Screen.jpeg?raw=true "Weather Dashboard Small Screen")
 <!-- ![Screenshot of Weather Dashboard](Assets/Screenshots/Weather_Da.jpeg?raw=true "Weather Dashboard") -->
+=======
+<!-- ![Screenshot of  Mobile Wireframe Rough Draft](project1/Assets/Screenshots/Restaurant_Recipe_App_Wireframe.JPG?raw=true "Mobile WireFrame Rough Draft") -->
+>>>>>>> 9f265f8e4e643e51639e4b4151038e9316c96532
