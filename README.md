@@ -36,4 +36,8 @@ THEN I am presented with the last searched city forecast
 
 ### Screenshots
 
-<!-- ![Screenshot of  Mobile Wireframe Rough Draft](project1/Assets/Screenshots/Restaurant_Recipe_App_Wireframe.JPG?raw=true "Mobile WireFrame Rough Draft") -->
+![Screenshot of Weather Dashboard](Assets/Screenshots/Weather_Dashboard.jpeg?raw=true "Weather Dashboard")
+![Screenshot of Weather Dashboard Local Storage](Assets/Screenshots/Weather_LocalStorage.jpeg?raw=true "Weather Dashboard Local Storage")
+![Screenshot of Weather Dashboard Medium Screen](Assets/Screenshots/Weather_Medium_Screen.jpeg?raw=true "Weather Dashboard Medium Screen Small Screen")
+![Screenshot of Weather Dashboard Small Screen](Assets/Screenshots/Weather_Small_Screen.jpeg?raw=true "Weather Dashboard Small Screen")
+<!-- ![Screenshot of Weather Dashboard](Assets/Screenshots/Weather_Da.jpeg?raw=true "Weather Dashboard") -->

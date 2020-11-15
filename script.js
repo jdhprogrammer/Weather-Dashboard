@@ -25,6 +25,7 @@ $(document).ready(function() {
         };
 
     };
+    drawHistory();
 
     getWeather.addEventListener('click', (event) => {
         event.preventDefault();
@@ -64,44 +65,58 @@ $(document).ready(function() {
         let targetCity = event.target;
         let location = "";
 
-        switch (targetCity.id) {
-            case 'cityButton0':
-                console.log('cityButton0 was clicked');
-                location = targetCity.textContent;
-                break;
-            case 'cityButton1':
-                console.log('cityButton1 was clicked');
-                location = targetCity.textContent;
-                break;
-            case 'cityButton2':
-                console.log('cityButton2 was clicked');
-                location = targetCity.textContent;
-                break;
-            case 'cityButton3':
-                console.log('cityButton3 was clicked');
-                location = targetCity.textContent;
-                break;
-            case 'cityButton4':
-                console.log('cityButton4 was clicked');
-                location = targetCity.textContent;
-                break;
-            case 'cityButton5':
-                console.log('cityButton5 was clicked');
-                location = targetCity.textContent;
-                break;
-            case 'cityButton6':
-                console.log('cityButton6 was clicked');
-                location = targetCity.textContent;
-                break;
-            case 'cityButton7':
-                console.log('cityButton8 was clicked');
-                location = targetCity.textContent;
-                break;
-            case 'cityButton8':
-                console.log('cityButton9 was clicked');
-                location = targetCity.textContent;
-                break;
+        // Unlimited number of cities
+        for (let i = 0; i < 100; i++) {
+            const cityId = "cityButton" + i;
+            switch (targetCity.id) {
+                case cityId:
+                    console.log(cityId + "was clicked")
+                    location = targetCity.textContent;
+                    break;
+            }
+
         }
+
+        // past cities buttons were breaking if you went past 9 cities
+
+        // switch (targetCity.id) {
+        //     case 'cityButton0':
+        //         console.log('cityButton0 was clicked');
+        //         location = targetCity.textContent;
+        //         break;
+        //     case 'cityButton1':
+        //         console.log('cityButton1 was clicked');
+        //         location = targetCity.textContent;
+        //         break;
+        //     case 'cityButton2':
+        //         console.log('cityButton2 was clicked');
+        //         location = targetCity.textContent;
+        //         break;
+        //     case 'cityButton3':
+        //         console.log('cityButton3 was clicked');
+        //         location = targetCity.textContent;
+        //         break;
+        //     case 'cityButton4':
+        //         console.log('cityButton4 was clicked');
+        //         location = targetCity.textContent;
+        //         break;
+        //     case 'cityButton5':
+        //         console.log('cityButton5 was clicked');
+        //         location = targetCity.textContent;
+        //         break;
+        //     case 'cityButton6':
+        //         console.log('cityButton6 was clicked');
+        //         location = targetCity.textContent;
+        //         break;
+        //     case 'cityButton7':
+        //         console.log('cityButton8 was clicked');
+        //         location = targetCity.textContent;
+        //         break;
+        //     case 'cityButton8':
+        //         console.log('cityButton9 was clicked');
+        //         location = targetCity.textContent;
+        //         break;
+        // }
 
         if (test) { console.log('location:' + location); }
         if (location == "") return;
